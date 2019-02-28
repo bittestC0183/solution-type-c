@@ -8,6 +8,7 @@ public class MyStack {
 	}
 	
 	public void push(String item) {
+		System.out.println(item);
 	}
 
 	public String pop() {

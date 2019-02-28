@@ -20,7 +20,7 @@ public class Main {
 		// 게임 시작
 		while( true ) {
 	
-			System.out.print( "[" + min + "-" + max + "] 사이의 값 입력:" );
+			System.out.print( "[" + min + "-" + max + "] 사이의 값 입력: " );
 			int answer = scanner.nextInt();
 			
 			boolean result = checkAnswer( answer );
@@ -39,6 +39,15 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+			count++;
+			if(answer > randomNumber) {
+				max = answer;
+			} else if(answer < randomNumber) {
+				min = answer;
+			} else if(answer == randomNumber) {
+				return true;
+			}
+		return false;
+		
 	}
 }
